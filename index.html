@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="Meet Abhijeet Udyog Samuh, a family group of nine businesses serving customers across vehicles, agriculture, packing, timber, building supplies, fuel and clothing.">
+  <meta name="theme-color" content="#8F1017">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abhijeet Udyog Samuh | Nine Businesses, One Family">
+  <meta property="og:description" content="A family group of nine businesses, built on trust across three generations.">
+  <meta property="og:url" content="https://saiwasankar.github.io/homebrew/">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Abhijeet Udyog Samuh | Nine Businesses, One Family">
+  <meta name="twitter:description" content="A family group of nine businesses, built on trust across three generations.">
+  <link rel="canonical" href="https://saiwasankar.github.io/homebrew/">
+  <title>Abhijeet Udyog Samuh | Nine Businesses, One Family</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Yatra+One&family=Mukta:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json" id="local-business-schema">{}</script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><span class="mk" data-i18n="logo_mark"></span><span class="t"><b data-i18n="logo_name"></b><small data-i18n="logo_tag"></small></span></a>
+    <div class="ctl">
+      <button id="langBtn" type="button" data-i18n-aria="lang_toggle"></button>
+      <button id="themeBtn" type="button" data-i18n-aria="theme_toggle">◐</button>
+    </div>
+    <nav class="nav" data-i18n-aria="sections_label">
+      <a href="#legacy" data-i18n="nav_legacy"></a>
+      <a href="#brands" data-i18n="nav_brands"></a>
+      <a href="#founders" data-i18n="nav_founders"></a>
+      <a href="#contact" data-i18n="nav_contact"></a>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+  <div class="hero" id="top">
+    <div class="wrap">
+      <div class="kicker" data-i18n="hero_kicker"></div>
+      <h1 data-i18n="hero_h"></h1>
+      <p class="lead" data-i18n="hero_p"></p>
+      <div class="actions">
+        <a class="btn solid" href="#legacy" data-i18n="hero_cta1"></a>
+        <a class="btn line" href="#brands" data-i18n="hero_cta2"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap stats-wrap">
+    <div class="stats" id="stats">
+      <div class="stat"><b data-stat="businesses"></b><span data-i18n="stat1"></span></div>
+      <div class="stat"><b data-stat="generations"></b><span data-i18n="stat2"></span></div>
+      <div class="stat"><b data-stat="familyGroups"></b><span data-i18n="stat3"></span></div>
+    </div>
+  </div>
+
+  <section class="band" id="values">
+    <div class="wrap">
+      <div class="sec-head"><div class="eyebrow" data-i18n="values_e"></div><h2 data-i18n="values_h"></h2><p data-i18n="values_p"></p></div>
+      <div class="vals" id="vals"></div>
+    </div>
+  </section>
+
+  <section class="band updates-band" id="updates">
+    <div class="wrap">
+      <div class="sec-head"><div class="eyebrow" data-i18n="updates_e"></div><h2 data-i18n="updates_h"></h2><p data-i18n="updates_p"></p></div>
+      <div class="updates" id="updates-list" aria-live="polite"></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="legacy">
+    <div class="wrap">
+      <div class="sec-head"><div class="eyebrow" data-i18n="legacy_e"></div><h2 data-i18n="legacy_h"></h2><p data-i18n="legacy_p"></p></div>
+      <div class="gens" id="gens"></div>
+    </div>
+  </section>
+
+  <section class="band" id="brands">
+    <div class="wrap">
+      <div class="sec-head"><div class="eyebrow" data-i18n="brands_e"></div><h2 data-i18n="brands_h"></h2><p data-i18n="brands_p"></p></div>
+      <label class="business-search"><span data-i18n="business_search"></span><input id="businessSearch" type="search" data-i18n-placeholder="business_search_placeholder" autocomplete="off"></label>
+      <p class="search-empty" id="searchEmpty" hidden data-i18n="search_empty"></p>
+      <div id="clusters"></div>
+    </div>
+  </section>
+
+  <section class="band alt" id="founders">
+    <div class="wrap">
+      <div class="sec-head"><div class="eyebrow" data-i18n="founders_e"></div><h2 data-i18n="founders_h"></h2><p data-i18n="founders_p"></p></div>
+      <div class="founders" id="founders-list"></div>
+    </div>
+  </section>
+
+  <section class="band cband" id="contact">
+    <div class="wrap">
+      <div class="sec-head"><div class="eyebrow" data-i18n="contact_e"></div><h2 data-i18n="contact_h"></h2><p data-i18n="contact_p"></p></div>
+      <div class="contact">
+        <div><h3 data-i18n="c_addr"></h3><p class="ph" data-i18n="c_addr_v"></p></div>
+        <div><h3 data-i18n="c_phone"></h3><p class="ph" id="contact-phone"></p></div>
+        <div><h3 data-i18n="c_mail"></h3><p class="ph" data-i18n="c_mail_v"></p></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<main id="biz" hidden></main>
+
+<footer>
+  <div class="wrap">
+    <div class="footer-brand"><b data-i18n="logo_name"></b> · <span data-i18n="footer_tagline"></span></div>
+    <div class="links" id="flinks"></div>
+    <div class="fine" data-i18n="fine"></div>
+  </div>
+</footer>
+</body>
+</html>

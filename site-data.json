@@ -1,0 +1,540 @@
+{
+  "config": {
+    "siteUrl": "https://saiwasankar.github.io/homebrew/",
+    "whatsappNumber": "",
+    "liveUpdates": []
+  },
+  "stats": {
+    "businesses": 9,
+    "generations": 3,
+    "familyGroups": 1
+  },
+  "seo": {
+    "en": {
+      "title": "Abhijeet Udyog Samuh | Nine Businesses, One Family",
+      "description": "Meet Abhijeet Udyog Samuh, a family group of nine businesses serving customers across vehicles, agriculture, packing, timber, building supplies, fuel and clothing."
+    },
+    "mr": {
+      "title": "अभिजीत उद्योग समूह | नऊ उद्योग, एक कुटुंब",
+      "description": "अभिजीत उद्योग समूहातील नऊ कौटुंबिक उद्योगांची माहिती आणि चौकशीसाठी संपर्क."
+    }
+  },
+  "translations": {
+    "en": {
+      "logo_name": "Abhijeet Udyog Samuh",
+      "logo_tag": "A TRADITION OF TRUST",
+      "nav_legacy": "Our legacy",
+      "nav_brands": "Our businesses",
+      "nav_founders": "Founders",
+      "nav_contact": "Contact",
+      "hero_kicker": "A joint family business group",
+      "hero_h": "One family. Nine businesses. One promise of trust.",
+      "hero_p": "Three generations of one family, building and running nine businesses on trust.",
+      "hero_cta1": "Read our family story",
+      "hero_cta2": "Explore our businesses",
+      "banner_cap": "The group at a glance",
+      "stat1": "Businesses",
+      "stat2": "Generations",
+      "stat3": "Joint family",
+      "values_e": "What we stand for",
+      "values_h": "Trust, family, tradition",
+      "values_p": "Three ideas that every one of our businesses is run on.",
+      "v1_t": "Trust",
+      "v1_p": "Customers come back because we keep our word on price, quality and service, year after year.",
+      "v1_w": "विश्वास",
+      "v2_t": "Family",
+      "v2_p": "One joint family stands behind every business, so every customer deals with people who answer to each other.",
+      "v2_w": "कुटुंब",
+      "v3_t": "Tradition",
+      "v3_p": "What one generation learned, the next carries forward, with the same values and fresh ideas.",
+      "v3_w": "परंपरा",
+      "legacy_e": "Our legacy",
+      "legacy_h": "From orange farming to nine family businesses",
+      "legacy_p": "The family business began with orange farming in Chandur Bazar. The second generation expanded into multiple sectors, and three brothers from the third generation now run family businesses.",
+      "gen_tag": [
+        "First generation",
+        "Second generation",
+        "Third generation"
+      ],
+      "gen_name": [
+        "Bhimraoji Ramji Wasankar",
+        "His five sons",
+        "Third generation"
+      ],
+      "gen_txt": [
+        "The family business began with orange farming in Chandur Bazar, Amravati.",
+        "The second generation expanded the family business into multiple sectors.",
+        "Three brothers from the third generation now run family businesses."
+      ],
+      "brands_e": "Our businesses",
+      "brands_h": "Nine businesses, one family behind each",
+      "brands_p": "Select a business to see what it offers and how to reach it.",
+      "cl1_h": "Showrooms",
+      "cl1_p": "Where buyers like to see the product, take a ride or a demo, and talk through finance.",
+      "cl2_h": "From farm to market",
+      "cl2_p": "Together with Farmtrac, these cover the whole farming cycle, from the field to the buyer.",
+      "cl3_h": "Build and supply",
+      "cl3_p": "Materials, fuel and cloth for homes, builders and businesses.",
+      "open": "Open page →",
+      "isnew": "New",
+      "founders_e": "Founders",
+      "founders_h": "The people behind it",
+      "founders_p": "A short message from each founder, in their own words.",
+      "f_name": "Founder name",
+      "f_role": "Role and businesses led",
+      "f_quote": "A line or two from the founder about what trust means to them.",
+      "photo": "Add photo",
+      "contact_e": "Contact",
+      "updates_e": "From the businesses",
+      "updates_h": "Current news and offers",
+      "updates_p": "Updates appear here when the family adds them.",
+      "updates_empty": "No current announcements. Please contact a business directly for the latest information.",
+      "business_search": "Find a business",
+      "business_search_placeholder": "Search by business name or service",
+      "search_empty": "No matching businesses. Try another search.",
+      "contact_h": "Visit or call us",
+      "contact_p": "Each business has its own address and hours on its page.",
+      "c_addr": "Head office",
+      "c_addr_v": "Street, town, district, PIN code",
+      "c_phone": "Phone and WhatsApp",
+      "c_mail": "Email",
+      "fine": "Text with a dashed underline, and dashed boxes, are placeholders for the family to fill in.",
+      "back": "← All businesses",
+      "what": "What you can do here",
+      "find": "Find us",
+      "addr_hours": "Address and opening hours go here.",
+      "gallery": "Photos",
+      "related": "Also from the family",
+      "chip_part": "Part of Abhijeet Udyog Samuh",
+      "cta_enq": "Send an enquiry",
+      "cta_home": "About the group",
+      "emi": "EMI estimate",
+      "price": "Vehicle price (₹)",
+      "down": "Down payment (₹)",
+      "rate": "Interest rate (% per year)",
+      "months": "Tenure (months)",
+      "emi_out": "Monthly EMI",
+      "emi_note": "These are example values. Real prices and rates come from the showroom.",
+      "enq": "Send an enquiry",
+      "f_n": "Your name",
+      "f_p": "Phone number",
+      "f_m": "Message",
+      "send": "Send",
+      "sent": "Opening WhatsApp…",
+      "logo_mark": "अ",
+      "footer_tagline": "A tradition of trust",
+      "sections_label": "Site sections",
+      "lang_toggle": "Switch language",
+      "theme_toggle": "Switch light or dark theme",
+      "contact_phone_placeholder": "Add the group phone and WhatsApp number",
+      "c_mail_v": "Add email address",
+      "whatsapp_missing": "Add the WhatsApp number in site-data.json before sending an enquiry.",
+      "showroom_photo": "showroom photo",
+      "lang_button": "मराठी",
+      "location": "Location",
+      "map_link": "View map and directions",
+      "official_site": "Official Honda dealer page",
+      "location_pending": "Exact address and hours are being confirmed with the family."
+    },
+    "mr": {
+      "logo_name": "अभिजीत उद्योग समूह",
+      "logo_tag": "विश्वासाची परंपरा",
+      "nav_legacy": "आमचा वारसा",
+      "nav_brands": "आमचे उद्योग",
+      "nav_founders": "संस्थापक",
+      "nav_contact": "संपर्क",
+      "hero_kicker": "एकत्र कुटुंबाचा उद्योग समूह",
+      "hero_h": "एक कुटुंब. नऊ उद्योग. विश्वासाचे एकच वचन.",
+      "hero_p": "एकाच कुटुंबाच्या तीन पिढ्या, विश्वासावर नऊ उद्योग उभे करत आणि चालवत आहेत.",
+      "hero_cta1": "आमची कौटुंबिक कथा वाचा",
+      "hero_cta2": "आमचे उद्योग पहा",
+      "banner_cap": "एका नजरेत समूह",
+      "stat1": "उद्योग",
+      "stat2": "पिढ्या",
+      "stat3": "एकत्र कुटुंब",
+      "values_e": "आमची मूल्ये",
+      "values_h": "विश्वास, कुटुंब, परंपरा",
+      "values_p": "आमचा प्रत्येक उद्योग या तीन गोष्टींवर चालतो.",
+      "v1_t": "विश्वास",
+      "v1_p": "किंमत, दर्जा आणि सेवेबाबत आम्ही शब्द पाळतो, म्हणून ग्राहक वर्षानुवर्षे परत येतात.",
+      "v1_w": "विश्वास",
+      "v2_t": "कुटुंब",
+      "v2_p": "प्रत्येक उद्योगामागे एकच एकत्र कुटुंब उभे आहे, त्यामुळे प्रत्येक ग्राहक एकमेकांना जबाबदार असलेल्या माणसांशी व्यवहार करतो.",
+      "v2_w": "कुटुंब",
+      "v3_t": "परंपरा",
+      "v3_p": "एका पिढीने जे शिकले, ते पुढची पिढी पुढे नेते, तीच मूल्ये आणि नवे विचार घेऊन.",
+      "v3_w": "परंपरा",
+      "legacy_e": "आमचा वारसा",
+      "legacy_h": "संत्र्याच्या शेतीपासून नऊ कौटुंबिक उद्योगांपर्यंत",
+      "legacy_p": "कौटुंबिक व्यवसायाची सुरुवात चांदूर बाजार येथे संत्र्याच्या शेतीपासून झाली. दुसऱ्या पिढीने विविध क्षेत्रांत व्यवसाय वाढवला आणि आता तिसऱ्या पिढीतील तीन भाऊ कौटुंबिक व्यवसाय चालवत आहेत.",
+      "gen_tag": [
+        "पहिली पिढी",
+        "दुसरी पिढी",
+        "तिसरी पिढी"
+      ],
+      "gen_name": [
+        "भीमरावजी रामजी वासनकर",
+        "त्यांचे पाच पुत्र",
+        "तिसरी पिढी"
+      ],
+      "gen_txt": [
+        "कौटुंबिक व्यवसायाची सुरुवात अमरावती जिल्ह्यातील चांदूर बाजार येथे संत्र्याच्या शेतीपासून झाली.",
+        "दुसऱ्या पिढीने कौटुंबिक व्यवसायाचा विविध क्षेत्रांत विस्तार केला.",
+        "तिसऱ्या पिढीतील तीन भाऊ आता कौटुंबिक व्यवसाय चालवत आहेत."
+      ],
+      "brands_e": "आमचे उद्योग",
+      "brands_h": "नऊ उद्योग, प्रत्येकामागे एकच कुटुंब",
+      "brands_p": "उद्योग निवडा आणि तो काय देतो व त्याच्याशी कसे संपर्क साधायचा ते पहा.",
+      "cl1_h": "शोरूम",
+      "cl1_p": "जिथे ग्राहक वस्तू पाहतात, टेस्ट राईड किंवा प्रात्यक्षिक घेतात आणि फायनान्सवर बोलतात.",
+      "cl2_h": "शेतापासून बाजारापर्यंत",
+      "cl2_p": "फार्मट्रॅकसह हे उद्योग शेतीचे संपूर्ण चक्र, शेतापासून खरेदीदारापर्यंत, सांभाळतात.",
+      "cl3_h": "बांधकाम आणि पुरवठा",
+      "cl3_p": "घरे, बांधकाम करणारे आणि व्यवसायांसाठी साहित्य, इंधन आणि कापड.",
+      "open": "पान उघडा →",
+      "isnew": "नवीन",
+      "founders_e": "संस्थापक",
+      "founders_h": "यामागची माणसे",
+      "founders_p": "प्रत्येक संस्थापकाचा छोटा संदेश, त्यांच्याच शब्दांत.",
+      "f_name": "संस्थापकाचे नाव",
+      "f_role": "भूमिका आणि सांभाळलेले उद्योग",
+      "f_quote": "विश्वास म्हणजे काय, याबद्दल संस्थापकाचे एक-दोन वाक्य.",
+      "photo": "फोटो जोडा",
+      "contact_e": "संपर्क",
+      "updates_e": "उद्योगांकडून",
+      "updates_h": "ताज्या बातम्या आणि ऑफर्स",
+      "updates_p": "कुटुंबाने अपडेट जोडल्यावर ते येथे दिसेल.",
+      "updates_empty": "सध्या कोणतीही घोषणा नाही. ताज्या माहितीसाठी संबंधित उद्योगाशी संपर्क साधा.",
+      "business_search": "उद्योग शोधा",
+      "business_search_placeholder": "उद्योगाचे नाव किंवा सेवा शोधा",
+      "search_empty": "या शोधाशी जुळणारा उद्योग सापडला नाही. दुसरा शब्द वापरून पहा.",
+      "contact_h": "भेट द्या किंवा कॉल करा",
+      "contact_p": "प्रत्येक उद्योगाचा पत्ता आणि वेळा त्याच्या पानावर आहेत.",
+      "c_addr": "मुख्य कार्यालय",
+      "c_addr_v": "रस्ता, गाव, जिल्हा, पिन कोड",
+      "c_phone": "फोन आणि WhatsApp",
+      "c_mail": "ईमेल",
+      "fine": "तुटक अधोरेखित मजकूर आणि तुटक चौकटी म्हणजे कुटुंबाने भरायच्या जागा.",
+      "back": "← सर्व उद्योग",
+      "what": "येथे काय करता येईल",
+      "find": "आम्हाला शोधा",
+      "addr_hours": "पत्ता आणि उघडण्याच्या वेळा येथे लिहा.",
+      "gallery": "फोटो",
+      "related": "कुटुंबातील इतर उद्योग",
+      "chip_part": "अभिजीत उद्योग समूहाचा भाग",
+      "cta_enq": "चौकशी पाठवा",
+      "cta_home": "समूहाबद्दल",
+      "emi": "EMI अंदाज",
+      "price": "वाहनाची किंमत (₹)",
+      "down": "डाउन पेमेंट (₹)",
+      "rate": "व्याजदर (% वार्षिक)",
+      "months": "कालावधी (महिने)",
+      "emi_out": "मासिक EMI",
+      "emi_note": "हे उदाहरणादाखल आकडे आहेत. खरी किंमत आणि दर शोरूममधून मिळतील.",
+      "enq": "चौकशी पाठवा",
+      "f_n": "तुमचे नाव",
+      "f_p": "फोन नंबर",
+      "f_m": "संदेश",
+      "send": "पाठवा",
+      "sent": "WhatsApp उघडत आहे…",
+      "logo_mark": "अ",
+      "footer_tagline": "विश्वासाची परंपरा",
+      "sections_label": "विभाग",
+      "lang_toggle": "भाषा बदला",
+      "theme_toggle": "उजवी किंवा गडद थीम निवडा",
+      "contact_phone_placeholder": "समूहाचा फोन आणि WhatsApp क्रमांक जोडा",
+      "c_mail_v": "ईमेल पत्ता जोडा",
+      "whatsapp_missing": "चौकशी पाठवण्यापूर्वी site-data.json मध्ये WhatsApp क्रमांक जोडा.",
+      "showroom_photo": "शोरूमचा फोटो",
+      "lang_button": "EN",
+      "location": "ठिकाण",
+      "map_link": "नकाशा आणि दिशा पहा",
+      "official_site": "होंडाचे अधिकृत डीलर पान",
+      "location_pending": "अचूक पत्ता आणि वेळा कुटुंबाकडून निश्चित केल्या जात आहेत."
+    }
+  },
+  "businesses": [
+    {
+      "id": "honda",
+      "a": "#D7262E",
+      "emi": [
+        90000,
+        15000,
+        11,
+        24
+      ],
+      "c": 1,
+      "mr": {
+        "n": "अभिजीत होंडा",
+        "t": "होंडा स्कूटर, मोटरसायकली आणि सेवा",
+        "d": "होंडा दुचाकींची माहिती घ्या. सेवा, टेस्ट राईड, फायनान्स, सध्याची किंमत आणि उपलब्धतेसाठी शोरूमशी संपर्क साधा.",
+        "i": [
+          "होंडा स्कूटर आणि मोटरसायकली",
+          "सेवा आणि देखभाल चौकशी",
+          "टेस्ट राईड आणि फायनान्सबद्दल विचारा"
+        ]
+      },
+      "en": {
+        "n": "Abhijeet Honda",
+        "t": "Honda scooters, motorcycles and service",
+        "d": "Explore Honda two-wheelers and ask the showroom about service, test rides, finance, current prices and availability.",
+        "i": [
+          "Honda scooters and motorcycles",
+          "Service and maintenance enquiries",
+          "Ask about test rides and finance"
+        ]
+      },
+      "location": {
+        "en": "In Front of Shrikrushna Temple, Amravati Road, Chandur Bazar, Maharashtra 444704, India.",
+        "mr": "श्रीकृष्ण मंदिरासमोर, अमरावती रोड, चांदूर बाजार, महाराष्ट्र ४४४७०४."
+      },
+      "mapUrl": "https://www.google.com/maps/place/Abhijeet+Honda/data=!4m2!3m1!1s0x3bd68ff79b2ad34f:0xe700fbb711f745cf",
+      "officialUrl": "https://dealers.honda2wheelersindia.com/honda-in-maharashtra-chandur-bazar-amravati-road-59585/home"
+    },
+    {
+      "id": "farmtrac",
+      "a": "#1F5FA8",
+      "emi": [
+        650000,
+        100000,
+        10,
+        60
+      ],
+      "c": 1,
+      "isNew": true,
+      "img": "assets/farmtrac.png",
+      "mr": {
+        "n": "अभिजीत ट्रॅक्टर्स · फार्मट्रॅक",
+        "t": "फार्मट्रॅक ट्रॅक्टर विक्री, सेवा आणि सुटे भाग",
+        "d": "फार्मट्रॅक मॉडेल्स, सेवा, सुटे भाग आणि उपलब्धतेसाठी भेट देण्यापूर्वी अभिजीत ट्रॅक्टर्सशी संपर्क साधा.",
+        "i": [
+          "फार्मट्रॅक ट्रॅक्टर चौकशी",
+          "सेवा आणि सुट्या भागांची चौकशी",
+          "उपलब्धता आणि शोरूमची स्थिती तपासा"
+        ]
+      },
+      "en": {
+        "n": "Abhijeet Tractors · Farmtrac",
+        "t": "Farmtrac tractor sales, service and spares",
+        "d": "Ask Abhijeet Tractors about Farmtrac models, service, spare parts and availability before visiting.",
+        "i": [
+          "Farmtrac tractor enquiries",
+          "Service and spare-parts enquiries",
+          "Confirm current availability and showroom status"
+        ]
+      },
+      "location": {
+        "en": "Lakhda Market, Paratwada Road, Sirajgaon Band, Maharashtra 444704 (Google listing; confirm with the family).",
+        "mr": "लखडा मार्केट, परतवाडा रोड, सिरजगाव बंड, महाराष्ट्र ४४४७०४ (Google वरील नोंद; कुटुंबाकडून खात्री करा)."
+      },
+      "mapUrl": "https://www.google.com/maps/place/Abhijeet+Tractors/data=!4m2!3m1!1s0x0:0x35065defbb84dbbe"
+    },
+    {
+      "id": "agrotech",
+      "a": "#2E8B3E",
+      "c": 2,
+      "mr": {
+        "n": "अभिजीत ॲग्रो टेक",
+        "t": "शेतीसाठी उपकरणे आणि साहित्य",
+        "d": "शेतीची उपकरणे, सध्याची उत्पादने आणि उपलब्धतेसाठी अभिजीत ॲग्रो टेकशी संपर्क साधा.",
+        "i": [
+          "शेतीच्या उपकरणांची चौकशी",
+          "सध्याच्या उत्पादनांची माहिती",
+          "उपलब्धतेसाठी फोन करा"
+        ]
+      },
+      "en": {
+        "n": "Abhijeet Agro Tech",
+        "t": "Farm equipment supplier",
+        "d": "Ask Abhijeet Agro Tech about farm equipment, current products and availability.",
+        "i": [
+          "Farm equipment enquiries",
+          "Ask about current products",
+          "Call to confirm availability"
+        ]
+      },
+      "location": {
+        "en": "6PQW+C99, Riddhpur, Chandur Bazar, Maharashtra 444704.",
+        "mr": "6PQW+C99, रिद्धपूर, चांदूर बाजार, महाराष्ट्र ४४४७०४."
+      },
+      "mapUrl": "https://www.google.com/maps/place/Abhijeet+Agro+Tech/data=!4m2!3m1!1s0x0:0x68c06fa74ce1db18"
+    },
+    {
+      "id": "farm",
+      "a": "#6B8E23",
+      "c": 2,
+      "mr": {
+        "n": "फार्म",
+        "t": "कुटुंबाने पिकवलेले",
+        "d": "आमच्या शेतातील उत्पादन आणि हंगाम.",
+        "i": [
+          "उत्पादन आणि हंगाम",
+          "थेट खरेदीची चौकशी",
+          "शेताला भेट"
+        ]
+      },
+      "en": {
+        "n": "Farm",
+        "t": "Grown by the family",
+        "d": "Produce and seasons from our own farm.",
+        "i": [
+          "Produce and seasons",
+          "Direct purchase enquiry",
+          "Visit the farm"
+        ]
+      },
+      "location": {
+        "en": "Brahmanwada Thadi, Amravati district (area shown on the family banner; exact address to be confirmed).",
+        "mr": "ब्राह्मणवाडा थडी, अमरावती जिल्हा (कौटुंबिक बॅनरवरील परिसर; अचूक पत्ता निश्चित करायचा आहे)."
+      }
+    },
+    {
+      "id": "santra",
+      "a": "#E8821A",
+      "c": 2,
+      "mr": {
+        "n": "संत्रा पॅकिंग",
+        "t": "बागेपासून बाजारापर्यंत",
+        "d": "संत्र्याची प्रतवारी आणि पॅकिंग, घाऊक व्यापाऱ्यांसाठी.",
+        "i": [
+          "प्रतवारी आणि पॅकिंग",
+          "घाऊक चौकशी",
+          "हंगामातील उपलब्धता"
+        ]
+      },
+      "en": {
+        "n": "Santra Packing",
+        "t": "From orchard to market",
+        "d": "Grading and packing of oranges, for wholesalers and bulk buyers.",
+        "i": [
+          "Grading and packing",
+          "Bulk and wholesale enquiry",
+          "Seasonal availability"
+        ]
+      },
+      "location": {
+        "en": "Brahmanwada Thadi, Amravati district (area shown on the family banner; exact address to be confirmed).",
+        "mr": "ब्राह्मणवाडा थडी, अमरावती जिल्हा (कौटुंबिक बॅनरवरील परिसर; अचूक पत्ता निश्चित करायचा आहे)."
+      }
+    },
+    {
+      "id": "sawmill",
+      "a": "#8A5A33",
+      "c": 3,
+      "mr": {
+        "n": "सॉ मिल",
+        "t": "गरजेनुसार कापलेले लाकूड",
+        "d": "लाकडाचे प्रकार, आकार आणि मागणीनुसार कटिंग.",
+        "i": [
+          "लाकडाचे प्रकार आणि आकार",
+          "मागणीनुसार कटिंग",
+          "मोठ्या मागणीसाठी दरपत्रक"
+        ]
+      },
+      "en": {
+        "n": "Saw Mill",
+        "t": "Timber, cut to need",
+        "d": "Timber types, sizes and cutting to your requirement.",
+        "i": [
+          "Timber types and sizes",
+          "Custom cutting enquiry",
+          "Bulk quote"
+        ]
+      },
+      "location": {
+        "en": "Chandur Bazar, Amravati district (area shown on the family banner; exact address to be confirmed).",
+        "mr": "चांदूर बाजार, अमरावती जिल्हा (कौटुंबिक बॅनरवरील परिसर; अचूक पत्ता निश्चित करायचा आहे)."
+      }
+    },
+    {
+      "id": "traders",
+      "a": "#46607A",
+      "c": 3,
+      "mr": {
+        "n": "अभिजीत ट्रेडर्स",
+        "t": "हार्डवेअर आणि बांधकाम साहित्य",
+        "d": "हार्डवेअर, सिमेंट आणि बांधकाम साहित्याचा सध्याचा प्रकार व उपलब्धतेसाठी अभिजीत ट्रेडर्सशी संपर्क साधा.",
+        "i": [
+          "उपलब्ध हार्डवेअर व साहित्य विचारा",
+          "साहित्याचे प्रकार आणि साठा तपासा",
+          "दरासाठी दुकानाशी संपर्क साधा"
+        ]
+      },
+      "en": {
+        "n": "Abhijeet Traders",
+        "t": "Hardware and building supplies",
+        "d": "Ask Abhijeet Traders about its current hardware, cement and building-supply range and availability.",
+        "i": [
+          "Ask about available hardware and materials",
+          "Confirm product sizes and stock",
+          "Call the shop for a quote"
+        ]
+      },
+      "location": {
+        "en": "6PQW+8J7, Riddhpur, Chandur Bazar, Maharashtra 444704 (confirm the landmark with the family).",
+        "mr": "6PQW+8J7, रिद्धपूर, चांदूर बाजार, महाराष्ट्र ४४४७०४ (कुटुंबाकडून ठिकाणाची खात्री करा)."
+      },
+      "mapUrl": "https://www.google.com/maps/place/Abhijeet+Traders/data=!4m2!3m1!1s0x0:0x8a1aa5a89c95cda0"
+    },
+    {
+      "id": "fuels",
+      "a": "#C48A00",
+      "c": 3,
+      "mr": {
+        "n": "अभिजीत फ्युएल्स · BPCL",
+        "t": "सिरजगाव येथे पेट्रोल आणि डिझेल",
+        "d": "अभिजीत फ्युएल्स BPCL पंपाचा नकाशा पहा आणि भेट देण्यापूर्वी सध्याची माहिती तपासा.",
+        "i": [
+          "पेट्रोल आणि डिझेल",
+          "पंपाचे ठिकाण नकाशावर पहा",
+          "थेट संपर्क क्रमांक आणि वेळा निश्चित करा"
+        ]
+      },
+      "en": {
+        "n": "Abhijeet Fuels · BPCL",
+        "t": "Petrol and diesel at Sirajgaon",
+        "d": "Find the Abhijeet Fuels BPCL listing and check current outlet details before visiting.",
+        "i": [
+          "Petrol and diesel",
+          "Check the map for the outlet location",
+          "Confirm the direct station contact and hours"
+        ]
+      },
+      "location": {
+        "en": "Sirajgaon Kasba, Amravati, Maharashtra 444810 (Google listing; exact road/address to be confirmed with the family).",
+        "mr": "सिरजगाव कसबा, अमरावती, महाराष्ट्र ४४४८१० (Google वरील नोंद; अचूक रस्ता/पत्ता कुटुंबाकडून निश्चित करायचा आहे)."
+      },
+      "mapUrl": "https://www.google.com/maps/place/Bharat+Petroleum+Corporation+Limited+AMRAVATI/data=!4m2!3m1!1s0x3bd68960200c16f5:0xc3a6d0763fd41913",
+      "officialUrl": "https://hellobpcl.in/rolocator/petrol-pumps/bharat-petroleum-petrol-pump-abhijeet-fuels-amravati-akola-182543"
+    },
+    {
+      "id": "cloth",
+      "a": "#B03A78",
+      "c": 3,
+      "mr": {
+        "n": "क्लॉथ सेंटर",
+        "t": "प्रत्येक प्रसंगासाठी कापड",
+        "d": "कापडाचे नवे संग्रह आणि सणासुदीच्या ऑफर्स.",
+        "i": [
+          "संग्रह",
+          "सणासुदीच्या ऑफर्स",
+          "दुकानाला भेट द्या"
+        ]
+      },
+      "en": {
+        "n": "Cloth Center",
+        "t": "Cloth for every occasion",
+        "d": "New collections and festival offers.",
+        "i": [
+          "Collections",
+          "Festival offers",
+          "Visit the store"
+        ]
+      },
+      "location": {
+        "en": "Brahmanwada Thadi, Amravati district (area shown on the family banner; exact address to be confirmed).",
+        "mr": "ब्राह्मणवाडा थडी, अमरावती जिल्हा (कौटुंबिक बॅनरवरील परिसर; अचूक पत्ता निश्चित करायचा आहे)."
+      }
+    }
+  ]
+}

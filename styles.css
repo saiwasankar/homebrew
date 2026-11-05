@@ -128,6 +128,15 @@ section.alt { background: var(--tint); }
 .update-card p { color: var(--muted); }
 .update-card .update-dates { margin-top: 12px; font-size: 0.82rem; }
 .update-link { align-self: start; color: var(--brand); font-weight: 700; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.offer-backdrop { position: fixed; inset: 0; z-index: 100; display: grid; place-items: center; overflow: auto; padding: 18px; background: rgba(20, 10, 10, 0.66); animation: offer-fade 0.18s ease both; }
+.offer-dialog { position: relative; width: min(100%, 560px); max-height: min(90vh, 720px); overflow: auto; padding: 32px; color: var(--fg); background: var(--surface); border: 1px solid var(--line); border-top: 5px solid var(--gold); box-shadow: 0 20px 70px rgba(0, 0, 0, 0.3); }
+.offer-close { position: absolute; top: 10px; right: 12px; width: 42px; height: 42px; border: 1px solid var(--line); background: var(--tint); color: var(--fg); font: inherit; font-size: 1.6rem; line-height: 1; cursor: pointer; }
+.offer-label { margin: 0 48px 12px 0; color: var(--brand); font-size: 0.8rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; }
+.offer-dialog h2 { margin: 0 40px 12px 0; font-size: clamp(1.5rem, 5vw, 2rem); }
+.offer-message { font-size: 1.05rem; }
+.offer-dates, .offer-terms { margin-top: 16px; color: var(--muted); font-size: 0.9rem; }
+.offer-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+@keyframes offer-fade { from { opacity: 0; } to { opacity: 1; } }
 .tile { transition: border-color 0.15s ease, background-color 0.15s ease, opacity 0.18s ease; }
 .tile[hidden], .cluster[hidden], [hidden] { display: none !important; }
 @keyframes update-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
@@ -222,6 +231,6 @@ textarea { min-height: 100px; resize: vertical; }
 .reveal, .reveal.in { transform: none; transition: none; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .reveal, .tile, .btn, .update-card { transition: none; animation: none; transform: none; }
+  .reveal, .tile, .btn, .update-card, .offer-backdrop { transition: none; animation: none; transform: none; }
 }
 .footer-brand b { font-family: var(--font-display); font-weight: 400; font-size: 1.2rem; }

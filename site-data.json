@@ -134,7 +134,11 @@
       "location": "Location",
       "map_link": "View map and directions",
       "official_site": "Official Honda dealer page",
-      "location_pending": "Exact address and hours are being confirmed with the family."
+      "location_pending": "Exact address and hours are being confirmed with the family.",
+      "offer_badge": "Current offer",
+      "offer_visit": "View this business",
+      "valid_dates": "Valid dates",
+      "close": "Close offer"
     },
     "mr": {
       "logo_name": "अभिजीत उद्योग समूह",
@@ -250,7 +254,11 @@
       "location": "ठिकाण",
       "map_link": "नकाशा आणि दिशा पहा",
       "official_site": "होंडाचे अधिकृत डीलर पान",
-      "location_pending": "अचूक पत्ता आणि वेळा कुटुंबाकडून निश्चित केल्या जात आहेत."
+      "location_pending": "अचूक पत्ता आणि वेळा कुटुंबाकडून निश्चित केल्या जात आहेत.",
+      "offer_badge": "सध्याची ऑफर",
+      "offer_visit": "हा उद्योग पहा",
+      "valid_dates": "वैध तारखा",
+      "close": "ऑफर बंद करा"
     }
   },
   "businesses": [

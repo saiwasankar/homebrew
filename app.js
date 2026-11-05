@@ -141,13 +141,17 @@
 
   }
 
-  function renderUpdates() {
+  function activeUpdates() {
     var now = new Date();
-    var updates = Array.isArray(config.liveUpdates) ? config.liveUpdates.filter(function (item) {
+    return Array.isArray(config.liveUpdates) ? config.liveUpdates.filter(function (item) {
       var from = item.start ? new Date(item.start + "T00:00:00") : null;
       var until = item.end ? new Date(item.end + "T23:59:59") : null;
       return (!from || from <= now) && (!until || until >= now) && item[lang] && item[lang].title && item[lang].text;
     }) : [];
+  }
+
+  function renderUpdates() {
+    var updates = activeUpdates();
     var list = $("#updates-list");
     if (!updates.length) {
       list.innerHTML = "<p class='updates-empty'>" + t("updates_empty") + "</p>";
@@ -159,6 +163,88 @@
       return "<article class='update-card'><div><h3>" + item[lang].title + "</h3><p>" + item[lang].text + "</p>" + dates + "</div>" +
         (business ? "<a class='update-link' href='#" + business.id + "'>" + business[lang].n + " →</a>" : "") + "</article>";
     }).join("");
+  }
+
+  function showOfferPopup(pageId) {
+    if ($(".offer-backdrop")) return;
+    var offer = activeUpdates().filter(function (item) {
+      return item.type === "offer" && (!item.businessId || !pageId || item.businessId === pageId);
+    })[0];
+    if (!offer) return;
+
+    var offerKey = "aus-offer-seen:" + (offer.id || [offer.businessId || "group", offer.start || "", offer.end || "", offer.en.title].join("|"));
+    try { if (sessionStorage.getItem(offerKey)) return; } catch (e) {}
+
+    var backdrop = document.createElement("div");
+    backdrop.className = "offer-backdrop";
+    var dialog = document.createElement("section");
+    dialog.className = "offer-dialog";
+    dialog.setAttribute("role", "dialog");
+    dialog.setAttribute("aria-modal", "true");
+    dialog.setAttribute("aria-labelledby", "offerTitle");
+
+    var close = document.createElement("button");
+    close.className = "offer-close";
+    close.type = "button";
+    close.setAttribute("aria-label", t("close"));
+    close.textContent = "×";
+    var label = document.createElement("p");
+    label.className = "offer-label";
+    label.textContent = t("offer_badge");
+    var title = document.createElement("h2");
+    title.id = "offerTitle";
+    title.textContent = offer[lang].title;
+    var message = document.createElement("p");
+    message.className = "offer-message";
+    message.textContent = offer[lang].text;
+    dialog.appendChild(close);
+    dialog.appendChild(label);
+    dialog.appendChild(title);
+    dialog.appendChild(message);
+
+    if (offer.start || offer.end) {
+      var dates = document.createElement("p");
+      dates.className = "offer-dates";
+      dates.textContent = t("valid_dates") + ": " + [offer.start, offer.end].filter(Boolean).join(" – ");
+      dialog.appendChild(dates);
+    }
+    if (offer[lang].terms) {
+      var terms = document.createElement("p");
+      terms.className = "offer-terms";
+      terms.textContent = offer[lang].terms;
+      dialog.appendChild(terms);
+    }
+    if (offer.businessId && byId(offer.businessId)) {
+      var actions = document.createElement("div");
+      actions.className = "offer-actions";
+      var visit = document.createElement("a");
+      visit.className = "btn primary";
+      visit.href = "#" + offer.businessId;
+      visit.textContent = t("offer_visit");
+      visit.addEventListener("click", dismissOffer);
+      actions.appendChild(visit);
+      dialog.appendChild(actions);
+    }
+
+    var oldOverflow = document.body.style.overflow;
+    function dismissOffer() {
+      try { sessionStorage.setItem(offerKey, "1"); } catch (e) {}
+      document.removeEventListener("keydown", onKeydown);
+      document.body.style.overflow = oldOverflow;
+      backdrop.remove();
+    }
+    function onKeydown(event) {
+      if (event.key === "Escape") dismissOffer();
+    }
+    close.addEventListener("click", dismissOffer);
+    backdrop.addEventListener("click", function (event) {
+      if (event.target === backdrop) dismissOffer();
+    });
+    document.addEventListener("keydown", onKeydown);
+    backdrop.appendChild(dialog);
+    document.body.appendChild(backdrop);
+    document.body.style.overflow = "hidden";
+    close.focus();
   }
 
   function applyBusinessSearch() {
@@ -265,6 +351,7 @@
     $("#biz").hidden = !isBiz;
     if (isBiz) { renderBiz(id); window.scrollTo(0, 0); }
     else { updateSeo(); renderHome(); }
+    showOfferPopup(isBiz ? id : "");
   }
 
   $("#langBtn").addEventListener("click", function () {

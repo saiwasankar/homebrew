@@ -10,15 +10,17 @@ A bilingual, responsive static website for the family's nine businesses. Site co
 
 ## Live updates
 
-The homepage directory search filters businesses as visitors type. Current announcements and offers are read from `config.liveUpdates` in `site-data.json`. Add an item with `start` and `end` dates (`YYYY-MM-DD`), an optional `businessId`, and English and Marathi copy:
+The homepage directory search filters businesses as visitors type. Current announcements and offers are read from `config.liveUpdates` in `site-data.json`. Add an item with `start` and `end` dates (`YYYY-MM-DD`), an optional `businessId`, and English and Marathi copy. Set `type` to `offer` to show a dismissible pop-up while the offer is active; the visitor sees it once per browser session. Other update types appear in the updates feed without a pop-up.
 
 ```json
 {
+  "type": "offer",
   "start": "2026-11-01",
   "end": "2026-11-15",
+  "id": "honda-festival-offer-2026",
   "businessId": "honda",
-  "en": { "title": "Verified update title", "text": "Verified details" },
-  "mr": { "title": "मराठी शीर्षक", "text": "मराठी तपशील" }
+  "en": { "title": "Verified offer title", "text": "Verified offer details", "terms": "Eligibility and terms" },
+  "mr": { "title": "ऑफरचे शीर्षक", "text": "ऑफरचा तपशील", "terms": "पात्रता आणि अटी" }
 }
 ```
 

@@ -83,7 +83,8 @@
         "url": baseUrl + "#" + business.id,
         "parentOrganization": { "@id": groupId }
       };
-      if (phone) entry.telephone = "+" + phone;
+      if (business.phone) entry.telephone = business.phone;
+      else if (phone) entry.telephone = "+" + phone;
       if (business.img) entry.image = new URL(business.img, baseUrl).href;
       if (business.address && Object.keys(business.address).some(function (key) { return business.address[key]; })) {
         entry.address = Object.assign({ "@type": "PostalAddress" }, business.address);
@@ -132,12 +133,10 @@
     $("#clusters").innerHTML = cl;
     applyBusinessSearch();
 
-    var f = "";
-    for (var j = 0; j < 3; j++) {
-      f += "<article class='fcard reveal'><div class='avatar'>" + ICON.person + "</div><div><h3 class='ph'>" + t("f_name") +
-        "</h3><div class='role'>" + t("f_role") + "</div></div><blockquote>" + t("f_quote") + "</blockquote></article>";
-    }
-    $("#founders-list").innerHTML = f;
+    $("#founders-list").innerHTML = t("family_cards").map(function (person) {
+      return "<article class='fcard reveal'><div><h3>" + person.title + "</h3><div class='role'>" + person.role +
+        "</div></div><blockquote>" + person.text + "</blockquote></article>";
+    }).join("");
 
   }
 
@@ -282,13 +281,17 @@
         "<label for='emiN'>" + t("months") + "<input id='emiN' type='number' min='1' step='1' value='" + x.emi[3] + "'></label>" +
         "<div class='emi-out'><span>" + t("emi_out") + "</span><b id='emiV'>–</b></div><p class='note'>" + t("emi_note") + "</p></div>";
     }
-    h += "<div class='panel' id='enqPanel'><h2>" + t("enq") + "</h2><form id='enqForm'><div style='display:grid;gap:14px'>" +
+    var enquiryOptions = id === "honda" ? t("honda_enquiry_options") : id === "farmtrac" ? t("farmtrac_enquiry_options") : null;
+    var enquiryFields = enquiryOptions ? "<label for='eqType'>" + t("f_type") + "<select id='eqType' required><option value='' selected disabled>" + t("f_type_placeholder") + "</option>" + enquiryOptions.map(function (option) { return "<option>" + option + "</option>"; }).join("") + "</select></label>" +
+      "<label for='eqDate'>" + t("f_date") + "<input id='eqDate' type='date'></label>" : "";
+    h += "<div class='panel' id='enqPanel'><h2>" + t("enq") + "</h2><form id='enqForm'><div class='form-stack'>" +
       "<label for='eqN'>" + t("f_n") + "<input id='eqN' type='text' autocomplete='name' required></label>" +
-      "<label for='eqP'>" + t("f_p") + "<input id='eqP' type='tel' autocomplete='tel' required></label>" +
+      "<label for='eqP'>" + t("f_p") + "<input id='eqP' type='tel' autocomplete='tel' inputmode='tel' required></label>" + enquiryFields +
       "<label for='eqM'>" + t("f_m") + "<textarea id='eqM'></textarea></label>" +
       "<button class='btn primary' type='submit'>" + t("send") + "</button>" +
       "<p class='status' id='eqS' role='status'></p></div></form></div></div>";
     var place = x.location ? "<p>" + x.location[lang] + "</p>" : "<p class='ph' style='justify-self:start'>" + t("addr_hours") + "</p>";
+    if (x.phone) place += "<a class='place-link' href='tel:" + x.phone.replace(/[^+\d]/g, "") + "'>" + t("call_business") + ": " + x.phone + "</a>";
     if (x.mapUrl) place += "<a class='place-link' href='" + x.mapUrl + "' target='_blank' rel='noopener noreferrer'>" + t("map_link") + " ↗</a>";
     if (x.officialUrl) place += "<a class='place-link' href='" + x.officialUrl + "' target='_blank' rel='noopener noreferrer'>" + t("official_site") + " ↗</a>";
     h += "<div class='panel'><h2>" + t("find") + "</h2>" + place + "</div>";
@@ -311,6 +314,11 @@
       ["#emiP", "#emiD", "#emiR", "#emiN"].forEach(function (s) { $(s).addEventListener("input", calc); });
       calc();
     }
+    var visitDate = $("#eqDate");
+    if (visitDate) {
+      var today = new Date();
+      visitDate.min = [today.getFullYear(), String(today.getMonth() + 1).padStart(2, "0"), String(today.getDate()).padStart(2, "0")].join("-");
+    }
     $("#enqForm").addEventListener("submit", function (ev) {
       ev.preventDefault();
       var phone = whatsappNumber();
@@ -320,10 +328,12 @@
       }
       var message = [
         t("enq") + ": " + c.n,
+        enquiryOptions ? t("f_type") + ": " + $("#eqType").value : "",
+        $("#eqDate") && $("#eqDate").value ? t("f_date") + ": " + $("#eqDate").value : "",
         t("f_n") + ": " + $("#eqN").value.trim(),
         t("f_p") + ": " + $("#eqP").value.trim(),
         t("f_m") + ": " + $("#eqM").value.trim()
-      ].join("\n");
+      ].filter(Boolean).join("\n");
       window.location.assign("https://wa.me/" + phone + "?text=" + encodeURIComponent(message));
     });
     $("#goEnq").addEventListener("click", function () { $("#enqPanel").scrollIntoView({ behavior: reduce ? "auto" : "smooth", block: "center" }); });
@@ -344,12 +354,12 @@
     $("#flinks").innerHTML = ["legacy", "brands", "founders", "contact"].map(function (k) { return "<a href='#" + k + "'>" + t("nav_" + k) + "</a>"; }).join("");
   }
 
-  function route() {
+  function route(preserveScroll) {
     var id = (location.hash || "").replace("#", "");
     var isBiz = !!byId(id);
     $("#home").hidden = isBiz;
     $("#biz").hidden = !isBiz;
-    if (isBiz) { renderBiz(id); window.scrollTo(0, 0); }
+    if (isBiz) { renderBiz(id); if (!preserveScroll) window.scrollTo(0, 0); }
     else { updateSeo(); renderHome(); }
     showOfferPopup(isBiz ? id : "");
   }
@@ -357,7 +367,7 @@
   $("#langBtn").addEventListener("click", function () {
     lang = other();
     try { localStorage.setItem("aus-lang-v2", lang); } catch (e) {}
-    applyText(); route();
+    applyText(); route(true);
   });
   $("#themeBtn").addEventListener("click", function () {
     var dark = root.getAttribute("data-theme") === "dark" ||

@@ -26,6 +26,10 @@ The homepage directory search filters businesses as visitors type. Current annou
 
 Expired or not-yet-active items are hidden automatically. Since GitHub Pages serves static files, publishing an edit to `site-data.json` is how the family updates the feed; this is not an admin dashboard or a live connection to business systems.
 
+## Customer enquiries
+
+Honda and Farmtrac pages collect the enquiry topic and an optional preferred visit date, then prepare a WhatsApp message with the visitor's details. The single shared WhatsApp destination is `config.whatsappNumber`. Individual business records can also have a `phone` value to show a one-tap phone link; Honda's listed number is included from its [official dealer profile](https://dealers.honda2wheelersindia.com/honda-in-maharashtra-chandur-bazar-amravati-road-59585/home). Confirm contact details with the family before launch. The site supports enquiries and visits; it does not take orders or payments.
+
 ## GitHub Pages
 
 The site is a static root-level site and uses relative paths for its CSS, JavaScript, content JSON, and image asset. In the repository, open **Settings → Pages**, choose **Deploy from a branch**, select `main` and `/ (root)`, then save. `.nojekyll` tells Pages to publish the files directly.

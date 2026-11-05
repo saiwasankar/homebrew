@@ -12,6 +12,10 @@
   --hero-bg: #9C1C22;
   --hero-bg2: #9C1C22;
   --hero-fg: #FFFFFF;
+  --header-bg: #30221E;
+  --header-fg: #F5EAE0;
+  --header-muted: #D6C8BC;
+  --header-line: #554039;
   --tint: #F3EBDD;
   --shadow: 0 14px 36px rgba(70, 38, 20, 0.10);
   --radius: 10px;
@@ -24,6 +28,7 @@
     --bg: #191211; --surface: #241A17; --fg: #F4EAE0; --muted: #C2B3A7; --line: #493832;
     --brand: #E06458; --on-brand: #1A0B0C; --saffron: #E28A3C; --gold: #E8B448;
     --hero-bg: #68191B; --hero-bg2: #68191B; --hero-fg: #FFFFFF; --tint: #30221E;
+    --header-bg: #160E0C; --header-fg: #F5EAE0; --header-muted: #C2B3A7; --header-line: #493832;
     --shadow: 0 5px 18px rgba(0, 0, 0, 0.22); --lift: 25%; color-scheme: dark;
   }
 }
@@ -31,12 +36,13 @@
   --bg: #191211; --surface: #241A17; --fg: #F4EAE0; --muted: #C2B3A7; --line: #493832;
   --brand: #E06458; --on-brand: #1A0B0C; --saffron: #E28A3C; --gold: #E8B448;
   --hero-bg: #68191B; --hero-bg2: #68191B; --hero-fg: #FFFFFF; --tint: #30221E;
+  --header-bg: #160E0C; --header-fg: #F5EAE0; --header-muted: #C2B3A7; --header-line: #493832;
   --shadow: 0 5px 18px rgba(0, 0, 0, 0.22); --lift: 25%; color-scheme: dark;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 8rem; }
 body { margin: 0; background: var(--bg); color: var(--fg); font-family: var(--font-body); font-size: 17px; line-height: 1.6; overflow-x: hidden; }
-body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--surface); }
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 30; background: var(--header-bg); }
 h1, h2, h3 { font-family: var(--font-body); font-weight: 700; line-height: 1.2; margin: 0; text-wrap: balance; }
 p { margin: 0; }
 a { color: inherit; }
@@ -46,17 +52,16 @@ svg { display: block; }
 .ph { border-bottom: 1.5px dashed var(--saffron); }
 
 /* header */
-.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--surface); border-bottom: 1px solid var(--line); }
+.top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; color: var(--header-fg); background: var(--header-bg); border-bottom: 1px solid var(--header-line); }
 .top .wrap { display: grid; grid-template-areas: "brand controls" "nav nav"; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px 14px; padding-block: 10px; }
-.logo { grid-area: brand; }
-.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; margin-right: auto; min-width: 0; }
-.mk { flex: none; width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--gold); color: #6A0A10; font-family: var(--font-display); font-size: 1.5rem; line-height: 1; padding-bottom: 4px; }
-.logo span.t { display: flex; flex-direction: column; min-width: 0; }
-.logo b { font-family: var(--font-display); font-weight: 400; font-size: clamp(1rem, 2.2vw, 1.3rem); color: var(--brand); line-height: 1.1; white-space: nowrap; }
-.logo small { font-size: 0.74rem; color: var(--muted); letter-spacing: 0.04em; }
+.logo { grid-area: brand; display: flex; flex-direction: column; align-items: flex-start; gap: 1px; text-decoration: none; margin-right: auto; min-width: 0; }
+.logo-plaque { position: relative; display: block; width: clamp(150px, 18vw, 240px); aspect-ratio: 2.23 / 1; overflow: hidden; }
+.logo-image { position: absolute; top: 50%; left: 50%; display: block; width: 128%; max-width: none; height: auto; transform: translate(-50%, -50%); }
+.logo small { padding-left: 6px; color: var(--header-muted); font-size: 0.67rem; line-height: 1.2; letter-spacing: 0.09em; }
 .nav { grid-area: nav; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; width: 100%; }
 .nav a { display: grid; place-items: center; min-height: 44px; padding: 4px 6px; text-align: center; text-decoration: none; font-weight: 700; font-size: clamp(0.7rem, 2.2vw, 0.95rem); line-height: 1.15; border-radius: 6px; white-space: normal; border-bottom: 2px solid transparent; }
-.nav a:hover { color: var(--brand); border-bottom-color: var(--gold); }
+.nav a { color: var(--header-fg); }
+.nav a:hover { color: var(--gold); border-bottom-color: var(--gold); }
 .ctl { grid-area: controls; display: flex; gap: 8px; }
 .ctl button { font: inherit; font-weight: 700; font-size: 0.88rem; cursor: pointer; color: var(--fg); background: var(--tint); border: 1px solid var(--line); border-radius: 7px; padding: 4px 10px; width: 64px; min-height: 40px; }
 .ctl button#themeBtn { width: 48px; }
@@ -73,8 +78,6 @@ svg { display: block; }
 .kicker { font-weight: 700; letter-spacing: 0.03em; font-size: 0.95rem; color: var(--gold); }
 .hero h1 { font-size: clamp(2.35rem, 6vw, 4rem); margin-top: 12px; max-width: 17ch; }
 html[lang="mr"] .hero h1 { max-width: 17ch; white-space: pre-line; }
-.hero-brand { width: min(100%, 320px); aspect-ratio: 2.45 / 1; overflow: hidden; margin: 14px 0 2px; border: 1px solid rgba(255, 255, 255, 0.2); border-radius: 6px; box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18); background: #c91f2b; }
-.hero-brand img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center 66%; transform: scale(1.03); }
 .hero .lead { max-width: 54ch; font-size: 1.12rem; margin-top: 16px; opacity: 0.92; min-height: 3.2em; }
 .hero .actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); width: min(100%, 560px); gap: 10px; margin-top: 26px; }
 .btn { display: inline-flex; align-items: center; justify-content: center; font: inherit; font-weight: 700; text-align: center; text-decoration: none; cursor: pointer; padding: 11px 18px; border-radius: 7px; border: 1px solid transparent; min-height: 52px; transition: background-color 0.15s ease, border-color 0.15s ease, transform 0.15s ease; }
@@ -247,9 +250,7 @@ textarea { min-height: 100px; resize: vertical; }
 
 @media (max-width: 480px) {
   .wrap { padding-left: max(18px, env(safe-area-inset-left, 0px)); padding-right: max(18px, env(safe-area-inset-right, 0px)); }
-  .logo small { font-size: 0.65rem; }
-  .logo b { font-size: clamp(0.8rem, 3.6vw, 1rem); }
-  .mk { width: 36px; height: 36px; }
+  .logo small { font-size: 0.62rem; }
   .ctl { gap: 5px; }
   .ctl button { width: 58px; padding-inline: 6px; }
   .ctl button#themeBtn { width: 42px; }

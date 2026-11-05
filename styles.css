@@ -55,7 +55,7 @@ svg { display: block; }
 .top { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; color: var(--header-fg); background: var(--header-bg); border-bottom: 1px solid var(--header-line); }
 .top .wrap { display: grid; grid-template-areas: "brand controls" "nav nav"; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 8px 14px; padding-block: 10px; }
 .logo { grid-area: brand; display: flex; flex-direction: column; align-items: flex-start; gap: 1px; text-decoration: none; margin-right: auto; min-width: 0; }
-.logo-plaque { position: relative; display: block; width: clamp(150px, 18vw, 240px); aspect-ratio: 2.23 / 1; overflow: hidden; }
+.logo-plaque { position: relative; display: block; width: clamp(120px, 14vw, 180px); aspect-ratio: 2.23 / 1; overflow: hidden; }
 .logo-image { position: absolute; top: 50%; left: 50%; display: block; width: 128%; max-width: none; height: auto; transform: translate(-50%, -50%); }
 .logo small { padding-left: 6px; color: var(--header-muted); font-size: 0.67rem; line-height: 1.2; letter-spacing: 0.09em; }
 .nav { grid-area: nav; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 4px; width: 100%; }
